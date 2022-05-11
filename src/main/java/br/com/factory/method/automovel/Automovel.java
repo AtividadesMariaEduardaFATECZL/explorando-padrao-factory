@@ -1,6 +1,6 @@
 package br.com.factory.method.automovel;
 
-import br.com.factory.method.util.NumberUtil;
+import br.com.factory.method.util.NumeroUtil;
 import br.com.factory.method.veiculo.Veiculo;
 
 import static org.joda.time.DateTime.now;
@@ -15,10 +15,10 @@ public class Automovel extends Veiculo {
 
     public Automovel(String placa, String marca, String modelo, String cor) {
         super(placa, marca,modelo,cor);
-        this.tempoParaAtingirCemKilometrosPorHora = new BigDecimal(String.valueOf(NumberUtil.generateRandomBigDecimalFromRange(new BigDecimal(10), new BigDecimal(30))));
-        this.deslocamento = new BigDecimal(String.valueOf(NumberUtil.generateRandomBigDecimalFromRange(new BigDecimal(50), new BigDecimal(650))));
-        this.numeroDePassageiros = (int) NumberUtil.generateRandomDoubleFromRange(1, 4);
-        this.ano = (int) NumberUtil.generateRandomDoubleFromRange(1920, now().getYear());
+        this.tempoParaAtingirCemKilometrosPorHora = new BigDecimal(String.valueOf(NumeroUtil.geraBigDecimalAleatorioEntre(new BigDecimal(10), new BigDecimal(30))));
+        this.deslocamento = new BigDecimal(String.valueOf(NumeroUtil.geraBigDecimalAleatorioEntre(new BigDecimal(50), new BigDecimal(650))));
+        this.numeroDePassageiros = (int) NumeroUtil.geraDoubleAleatorioEntre(1, 4);
+        this.ano = (int) NumeroUtil.geraDoubleAleatorioEntre(1920, now().getYear());
     }
 
     @Override

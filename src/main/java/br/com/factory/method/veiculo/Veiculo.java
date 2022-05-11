@@ -1,6 +1,6 @@
 package br.com.factory.method.veiculo;
 
-import br.com.factory.method.util.NumberUtil;
+import br.com.factory.method.util.NumeroUtil;
 
 import java.math.BigDecimal;
 
@@ -16,7 +16,7 @@ public abstract class Veiculo {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
-        this.velocidadeMaxima = new BigDecimal(String.valueOf(NumberUtil.generateRandomBigDecimalFromRange(new BigDecimal(2000), new BigDecimal(5000))));
+        this.velocidadeMaxima = new BigDecimal(String.valueOf(NumeroUtil.geraBigDecimalAleatorioEntre(new BigDecimal(2000), new BigDecimal(5000))));
     }
 
     public abstract void criaDeslocamento();

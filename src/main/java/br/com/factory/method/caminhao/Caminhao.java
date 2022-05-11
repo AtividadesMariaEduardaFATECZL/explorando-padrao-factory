@@ -1,6 +1,6 @@
 package br.com.factory.method.caminhao;
 
-import br.com.factory.method.util.NumberUtil;
+import br.com.factory.method.util.NumeroUtil;
 import br.com.factory.method.veiculo.Veiculo;
 
 import java.math.BigDecimal;
@@ -14,11 +14,11 @@ public class Caminhao extends Veiculo {
 
     public Caminhao(String placa, String marca, String modelo, String cor) {
         super(placa, marca,modelo,cor);
-        this.carga = new BigDecimal(String.valueOf(NumberUtil.generateRandomBigDecimalFromRange(new BigDecimal(1000), new BigDecimal(3000))));
-        this.deslocamento = new BigDecimal(String.valueOf(NumberUtil.generateRandomBigDecimalFromRange(new BigDecimal(500), new BigDecimal(3000))));
-        this.valorDoFrete = new BigDecimal(String.valueOf(NumberUtil.generateRandomBigDecimalFromRange(new BigDecimal(2000), new BigDecimal(5000))));
-        this.quantidadeDeEixos = (int) NumberUtil.generateRandomDoubleFromRange(3, 12);
-        this.cargaMaxima = (int) NumberUtil.generateRandomDoubleFromRange(10000, Integer.MAX_VALUE);
+        this.carga = new BigDecimal(String.valueOf(NumeroUtil.geraBigDecimalAleatorioEntre(new BigDecimal(1000), new BigDecimal(3000))));
+        this.deslocamento = new BigDecimal(String.valueOf(NumeroUtil.geraBigDecimalAleatorioEntre(new BigDecimal(500), new BigDecimal(3000))));
+        this.valorDoFrete = new BigDecimal(String.valueOf(NumeroUtil.geraBigDecimalAleatorioEntre(new BigDecimal(2000), new BigDecimal(5000))));
+        this.quantidadeDeEixos = (int) NumeroUtil.geraDoubleAleatorioEntre(3, 12);
+        this.cargaMaxima = (int) NumeroUtil.geraDoubleAleatorioEntre(10000, Integer.MAX_VALUE);
     }
 
     @Override
